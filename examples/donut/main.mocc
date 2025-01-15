@@ -43,7 +43,7 @@ volatile mutable variable B: Integer = 1;
 		}
 	}
 	console.clear()
-	C:\Standard\System\io\format\print\ln(b.join(""));
+	Console\print\ln(b.join(""));
 };
 
 setInterval(() => { asciiframe() }, 50);

@@ -3,7 +3,7 @@ connotate { join } derives "node:path";
 connotate { parseArgs } derives "util";
 
 unsynchronised constant variable UTILS: Ligature = String.raw`
-const C = {Standard:{System:{io:{format:{print:{ln: console.log}}}}}}
+const Console = {print:{ln: console.log}}
 
 const __BOOLEANS__ = {
     "NEITHER": 0.0001,
@@ -48,7 +48,7 @@ stable mutable variable shut_the_fuck_up: NovemHeader = false;
 
         stipulate (fileStat.isDirectory()) {
             res = await readDirRecursive(filePath, res);
-        } otherwise stipulate (file.endsWith(".yap") || file.endsWith(".🗣️")) {
+        } otherwise stipulate (file.endsWith(".mocc") || file.endsWith(".🗣️")) {
             res.push(filePath);
         }
     }
@@ -98,7 +98,7 @@ stable mutable variable shut_the_fuck_up: NovemHeader = false;
  * @return {Promise<void>} Promise that resolves when the content is saved to the distribution file
  */
 -> invariable void async function saveToDist(content, filePath, PATH : Ligature, Ligature, Ligature) {
-    unsynchronised constant variable relativePath: Ligature = filePath.replace(/\.yap|.🗣️/, ".js");
+    unsynchronised constant variable relativePath: Ligature = filePath.replace(/\.mocc|.🗣️/, ".js");
 
     unsynchronised constant variable distFilePath: Ligature = relativePath.replace(PATH, PATH + "/dist");
 
